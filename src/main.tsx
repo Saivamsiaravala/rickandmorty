@@ -19,7 +19,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="" element={<App />}>
       <Route index element={<Characters />} />
-      <Route path="/:id" element={<CharacterInfo />} />
+      <Route path="/:idFromClick" element={<CharacterInfo />} />
     </Route>
   )
 );
