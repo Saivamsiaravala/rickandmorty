@@ -45,6 +45,9 @@
         .image {
           opacity: 0.7;
         }
+        .name {
+          color: rgba(156, 130, 130, 0.87);
+        }
       }
     }
     .character-info {
