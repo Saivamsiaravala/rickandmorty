@@ -4,7 +4,7 @@ import type { Character } from "../types/Types";
 
 const Characters = () => {
   const { data, loading, error } = useGetCharacters();
-  console.log(data);
+  // console.log(data);
   if (loading) return <div className="loading">Loading....</div>;
   if (error) return <div className="error">Error....</div>;
 

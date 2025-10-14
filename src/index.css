@@ -47,6 +47,17 @@
         }
       }
     }
+    .character-info {
+      text-align: center;
+      margin-top: 2rem;
+      .image {
+        width: 15rem;
+        border-radius: 1rem;
+      }
+      .name {
+        font-weight: 700;
+      }
+    }
   }
 }
 
@@ -55,6 +66,16 @@
     main {
       .characters {
         grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .app {
+    main {
+      .characters {
+        grid-template-columns: repeat(3, 1fr);
       }
     }
   }
