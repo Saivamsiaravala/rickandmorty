@@ -14,12 +14,14 @@ import { InMemoryCache } from "@apollo/client";
 import { ApolloProvider } from "@apollo/client/react";
 import { HttpLink } from "@apollo/client";
 import CharacterInfo from "./pages/CharacterInfo.tsx";
+import Search from "./pages/Search.tsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="" element={<App />}>
+    <Route path="/" element={<App />}>
       <Route index element={<Characters />} />
-      <Route path="/:idFromClick" element={<CharacterInfo />} />
+      <Route path="search" element={<Search />} />
+      <Route path=":idFromClick" element={<CharacterInfo />} />
     </Route>
   )
 );

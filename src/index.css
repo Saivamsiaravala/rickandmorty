@@ -15,6 +15,11 @@
 
 .app {
   header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration-style: none;
+    gap: 1rem;
     text-align: center;
     font-weight: 700;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
@@ -61,6 +66,81 @@
         font-weight: 700;
       }
     }
+    .search {
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      border: 2px solid wheat;
+      .form {
+        width: fit-content;
+        display: flex;
+        .input {
+          width: 20rem;
+        }
+      }
+      .results {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        align-content: center;
+        .character {
+          width: fit-content;
+          border: none;
+          background-color: transparent;
+          cursor: pointer;
+          color: white;
+          text-decoration-line: none;
+          margin: 2rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .name {
+            text-align: center;
+            font-weight: 600;
+          }
+          .image {
+            width: 10rem;
+            border-radius: 1rem;
+          }
+        }
+        .character:hover {
+          .image {
+            opacity: 0.7;
+          }
+          .name {
+            color: rgba(156, 130, 130, 0.87);
+          }
+        }
+        .spinner {
+          border: 4px solid rgba(0, 0, 0, 0.1);
+          border-left-color: #09f;
+          border-radius: 50%;
+          width: 24px;
+          height: 24px;
+          animation: spin 1s linear infinite;
+          display: inline-block;
+          margin-left: 10px;
+        }
+
+        .search-for-results {
+          width: 100%;
+          border: 2px solid white;
+        }
+
+        .no-results {
+          border: 2px solid white;
+          text-align: center;
+        }
+
+        @keyframes spin {
+          to {
+            transform: rotate(360deg);
+          }
+        }
+      }
+    }
   }
 }
 
@@ -69,6 +149,11 @@
     main {
       .characters {
         grid-template-columns: repeat(2, 1fr);
+      }
+      .search {
+        .results {
+          grid-template-columns: repeat(2, 1fr);
+        }
       }
     }
   }
@@ -79,6 +164,26 @@
     main {
       .characters {
         grid-template-columns: repeat(3, 1fr);
+      }
+      .search {
+        .results {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .app {
+    main {
+      .characters {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .search {
+        .results {
+          grid-template-columns: repeat(4, 1fr);
+        }
       }
     }
   }

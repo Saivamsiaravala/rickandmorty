@@ -23,3 +23,19 @@ export type CharacterInfoType = {
     image: string;
   };
 };
+
+export type SearchCharacterType = {
+  characters: {
+    results: searchCharacter[];
+  };
+};
+
+interface searchCharacter {
+  name: string;
+  image: string;
+  gender: string;
+  id: string;
+  location: {
+    name: string;
+  };
+}
