@@ -26,6 +26,12 @@
       sans-serif;
     font-size: x-large;
   }
+  .search-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 1.5rem;
+  }
   main {
     .characters {
       display: grid;

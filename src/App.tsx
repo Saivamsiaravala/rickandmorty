@@ -8,11 +8,10 @@ const App = () => {
         <Link to="/" style={{ textDecorationLine: "none" }}>
           Rick and Morty
         </Link>
-        <Link to="search">
-          <CiSearch />
-        </Link>
       </header>
-
+      <Link to="search" className="search-btn">
+        <CiSearch />
+      </Link>
       <main>
         <Outlet />
       </main>
