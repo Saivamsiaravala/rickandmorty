@@ -80,9 +80,17 @@
         gap: 1rem;
         .input {
           width: 100%;
+          border-radius: 0.1rem;
+          border: none;
         }
         .submit-btn {
           width: 5rem;
+          border-radius: 0.1rem;
+          border: none;
+        }
+        .submit-btn:hover {
+          background-color: white;
+          color: gray;
         }
       }
       .results {
@@ -159,9 +167,17 @@
       .search {
         .form {
           flex-direction: row;
+          .input {
+            height: 1.5rem;
+          }
+          .submit-btn {
+            height: 1.5rem;
+          }
         }
         .results {
-          grid-template-columns: repeat(2, 1fr);
+          .characters {
+            grid-template-columns: repeat(2, 1fr);
+          }
         }
       }
     }
@@ -179,7 +195,9 @@
           flex-direction: row;
         }
         .results {
-          grid-template-columns: repeat(3, 1fr);
+          .characters {
+            grid-template-columns: repeat(3, 1fr);
+          }
         }
       }
     }
@@ -197,7 +215,9 @@
           flex-direction: row;
         }
         .results {
-          grid-template-columns: repeat(4, 1fr);
+          .characters {
+            grid-template-columns: repeat(4, 1fr);
+          }
         }
       }
     }
