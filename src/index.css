@@ -82,11 +82,13 @@
           width: 100%;
           border-radius: 0.1rem;
           border: none;
+          height: 1.5rem;
         }
         .submit-btn {
           width: 5rem;
           border-radius: 0.1rem;
           border: none;
+          height: 1.5rem;
         }
         .submit-btn:hover {
           background-color: white;
@@ -97,8 +99,7 @@
         .characters {
           display: grid;
           grid-template-columns: repeat(1, 1fr);
-          justify-content: center;
-          align-content: center;
+          place-items: center;
           .character {
             width: fit-content;
             border: none;
@@ -167,12 +168,6 @@
       .search {
         .form {
           flex-direction: row;
-          .input {
-            height: 1.5rem;
-          }
-          .submit-btn {
-            height: 1.5rem;
-          }
         }
         .results {
           .characters {
