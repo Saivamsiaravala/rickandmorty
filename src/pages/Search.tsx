@@ -41,7 +41,9 @@ const Search = () => {
           onChange={(e) => setSearchInput(e.target.value)}
           className="input"
         />
-        <button type="submit">Submit</button>
+        <button type="submit" className="submit-btn">
+          Submit
+        </button>
       </form>
       <div className="results">
         {called ? (
@@ -55,7 +57,7 @@ const Search = () => {
                 ) : (
                   <>
                     {data?.characters.results.length ? (
-                      <>
+                      <div className="characters">
                         {data.characters.results.map((character) => {
                           const { id, name, gender, image, location } =
                             character;
@@ -72,7 +74,7 @@ const Search = () => {
                             </button>
                           );
                         })}
-                      </>
+                      </div>
                     ) : (
                       <div className="no-results">No Results</div>
                     )}
