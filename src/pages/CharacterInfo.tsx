@@ -6,22 +6,19 @@ const CharacterInfo = () => {
   const { data, error, loading } = useGetCharacter(idFromClick);
   if (loading) return <>...loading</>;
   if (error) return <>...error</>;
-  // console.log(data);
   if (data) {
     const { name, gender, id, image, location, species, status } =
-      data?.character;
+      data.character;
     return (
       <div className="character-info">
-        {data && (
-          <div key={id}>
-            <img src={image} alt={name} className="image" />
-            <div className="name">{name}</div>
-            <div className="gender">{gender}</div>
-            <div className="location">{location.name}</div>
-            <div className="species">{species}</div>
-            <div className="status">{status}</div>
-          </div>
-        )}
+        <div key={id}>
+          <img src={image} alt={name} className="image" />
+          <div className="name">{name}</div>
+          <div className="gender">Gender: {gender}</div>
+          <div className="location">From: {location.name}</div>
+          <div className="species">Species: {species}</div>
+          <div className="status">status: {status}</div>
+        </div>
       </div>
     );
   }
